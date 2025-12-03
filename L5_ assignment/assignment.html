@@ -1,11 +1,146 @@
 <!DOCTYPE html>
+<!-- Student Name: Mithun | Date: December 2, 2025 | Assignment: CTI-110 L5 - HTML Forms and Video -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L5 Assignment</title>
+    <title>StreamFlix - Movie & Series Database</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>🎬 StreamFlix Database</h1>
+        <p>Search and discover your favorite movies and TV series</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Movie & Series Search</h2>
+            <p>Find detailed information about movies and TV shows. Enter your search criteria below to explore our extensive database.</p>
+            
+            <!-- Form method: GET is used because this is a search operation that retrieves data, allows bookmarking results, and shares queries via URL -->
+            <form action="https://httpbin.org/get" method="GET">
+                
+                <!-- Text input for movie/series title with validation -->
+                <div class="form-group">
+                    <label for="title">Movie or Series Title:</label>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        name="title" 
+                        placeholder="Enter title (e.g., Inception, Breaking Bad)"
+                        minlength="2"
+                        required>
+                    <small>Required, minimum 2 characters</small>
+                </div>
+
+                <!-- Text input for director/creator name -->
+                <div class="form-group">
+                    <label for="creator">Director or Creator:</label>
+                    <input 
+                        type="text" 
+                        id="creator" 
+                        name="creator" 
+                        placeholder="Enter director or creator name"
+                        pattern="[A-Za-z\s\-.]+"
+                        title="Please enter a valid name (letters, spaces, hyphens, and periods only)">
+                    <small>Optional, letters and spaces only</small>
+                </div>
+
+                <!-- Email input for notifications with validation -->
+                <div class="form-group">
+                    <label for="email">Email for Updates:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="your.email@example.com"
+                        required>
+                    <small>Required, we'll send search results to your email</small>
+                </div>
+
+                <!-- Select dropdown for genre -->
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre">
+                        <option value="">-- Select a Genre --</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="romance">Romance</option>
+                        <option value="documentary">Documentary</option>
+                    </select>
+                </div>
+
+                <!-- Radio buttons for content type -->
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Content Type:</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="movie" name="type" value="movie" checked>
+                            <label for="movie">Movie</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="series" name="type" value="series">
+                            <label for="series">TV Series</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="both" name="type" value="both">
+                            <label for="both">Both</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Checkbox for new releases filter -->
+                <div class="form-group">
+                    <input type="checkbox" id="new-releases" name="new-releases" value="yes">
+                    <label for="new-releases">Show only new releases (last 12 months)</label>
+                </div>
+
+                <!-- Textarea for additional search preferences -->
+                <div class="form-group">
+                    <label for="preferences">Additional Preferences:</label>
+                    <textarea 
+                        id="preferences" 
+                        name="preferences" 
+                        rows="4" 
+                        placeholder="Enter any additional details (actors, year, rating preferences, etc.)"></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit">Search Database</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="video-section">
+            <h2>How to Use StreamFlix Database</h2>
+            <p>Watch a quick sample of how a movie filming camera looks like.</p>
+            
+            <!-- HTML5 video element with controls-->
+            <video controls width="100%" poster="media/poster.jpg">
+                <source src="moviecamera.mp4" type="video/mp4">
+                
+                <!-- <track kind="captions" src="media/captions.vtt" srclang="en" label="English" default> -->
+                
+                <p>Your browser does not support the HTML5 video element. 
+                   Please <a href="moviecamera.mp4" download>download the video</a> to watch it.</p>
+            </video>
+            
+            <p class="video-caption">
+                <small>This video shows a sample of how a movie camera looks like.</small>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 StreamFlix Database | CTI-110 Assignment by Mithun</p>
+    </footer>
 </body>
 </html>
