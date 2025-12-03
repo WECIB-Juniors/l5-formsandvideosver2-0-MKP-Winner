@@ -1,0 +1,267 @@
+/* 
+   CTI-110 L5 Assignment Styles - StreamFlix Movie Database
+   Simple, clean design with movie theater-inspired colors
+*/
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    /* Dark movie theater background with subtle gradient */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header styles - Cinema marquee inspired */
+header {
+    background: linear-gradient(135deg, #e94560 0%, #c41e3a 100%);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Main content container */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section styles - Movie poster card effect */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+section h2 {
+    color: #e94560;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+section > p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+    background-color: white;
+}
+
+/* Validation styles */
+input:required:invalid {
+    border-color: #ff6b6b;
+}
+
+input:required:valid {
+    border-color: #51cf66;
+}
+
+/* Helper text */
+small {
+    display: block;
+    margin-top: 0.4rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Fieldset for radio buttons */
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.2rem;
+    background-color: #f8f8f8;
+}
+
+legend {
+    font-weight: 600;
+    color: #333;
+    padding: 0 0.5rem;
+}
+
+.radio-group {
+    margin: 0.6rem 0;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.6rem;
+    cursor: pointer;
+    accent-color: #e94560;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+    margin-right: 0.6rem;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    accent-color: #e94560;
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Button styles - Movie ticket inspired */
+button {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #e94560 0%, #c41e3a 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+}
+
+button[type="reset"] {
+    background: #555;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Video section styles */
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    border: 3px solid #e94560;
+}
+
+.video-caption {
+    color: #555;
+    font-style: italic;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+    border-left: 5px solid #e94560;
+    border-radius: 6px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #e0e0e0;
+    margin-top: 2rem;
+    font-size: 1.05rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    section {
+        padding: 1.8rem;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 0.7rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    section h2 {
+        font-size: 1.6rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+}
